@@ -1,17 +1,19 @@
 function ReaderText() {
     $.ajax({
-        url: 'ReaderText.php',
-        dataType: 'json',
-        type: 'post',
-        contentType: 'application/json',
+        method: "get",
+        url: "ReaderText.php",
         data:"",
-        processData: false,
-        success: function( data, textStatus, jQxhr ){
-            $('#response pre').html( JSON.stringify( data ) );
-        },
-        error: function( jqXhr, textStatus, errorThrown ){
-            console.log( errorThrown );
+        success: function (data) {
+            $('#textList').append(data);
+        }, error: function (jqXhr, textStatus, errorThrown) {
+            console.log(errorThrown);
         }
+
     });
 
+
+}
+
+function StopList() {
+  document.getElementById("textList").innerText = "";
 }
