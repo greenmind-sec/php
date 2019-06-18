@@ -8,3 +8,5 @@ while (!feof($file_handle)) {
 fclose($file_handle);
 
 ?>
+
+<!-- Windump -i 2 -e > C:/xampp/htdocs/WinDump/Arquivo.txt -->

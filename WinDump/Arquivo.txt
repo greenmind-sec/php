@@ -1,1 +1,2 @@
-TESTE DE ESCRITA, TESTE DE ESCRITA, TESTE DE ESCRITA,ESCRITA
+02:14:32.380231 00:00:00:00:00:01 (oui Ethernet) > 01:80:c2:00:00:02 (oui Unknown), ethertype Slow Protocols (0x8809), length 60: unknown (10)v0, length: 46
+
