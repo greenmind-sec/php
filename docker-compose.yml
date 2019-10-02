@@ -1,0 +1,21 @@
+version: '3.3'
+services:
+    nginx:
+        container_name: nginx
+        image: nginx
+        restart: always
+        volumes:
+            - ./WinDump:/var/www/html
+        ports:
+            - "420:80"
+        links:
+            - php-fpm
+
+    php-fpm:
+        container_name: php
+        image: php:7.4-rc-alpine
+        restart: always
+        expose:
+            - "9000"
+        volumes:
+            - ./WinDump:/var/www/html
