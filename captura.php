@@ -1,6 +1,15 @@
-<?php
+Interface <?php echo htmlspecialchars($_POST['interface']); ?>.
+Quantidade de pacotes <?php echo (int)$_POST['npacotes']; ?>.
+Saida <?php echo ($_POST['saida']); ?>.
 
-$npacotes = $_POST['npacotes'];
-$output = shell_exec('echo "Fuu"'+$npacotes);
+<?php
+$interface = $_POST['interface'];
+$npacotes = (int)$_POST['npacotes'];
+$saida = $_POST['saida'];
+
+echo "$interface , $npacotes , $saida";
+
+$output = shell_exec('id');
+//$output = shell_exec('sudo ./captura.sh '+$interface+' '+'-c '+$npacotes+' '+$saida);
 echo "<pre>$output</pre>";
 ?>
